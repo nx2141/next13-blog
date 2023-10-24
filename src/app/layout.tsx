@@ -1,8 +1,10 @@
-import "./globals.css";
-import type { Metadata } from "next";
+import { Suspense } from "react";
 import { Inter } from "next/font/google";
 import Header from "./Header";
 import Footer from "./Footer";
+import "./globals.css";
+import type { Metadata } from "next";
+import Loading from "./loading";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,9 +21,13 @@ export default function RootLayout({
   return (
     <html lang="ja">
       <body className="conteiner mx-auto bg-slate-700 text-slate text-slate-50">
-        <Header />
-        {children}
-        <Footer />
+        <div className="flex flex-col min-h-screen">
+          <Header />
+          <main className="flex-grow">
+            <Suspense fallback={<Loading />}>{children}</Suspense>
+          </main>
+          <Footer />
+        </div>
       </body>
     </html>
   );

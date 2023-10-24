@@ -1,16 +1,16 @@
 {
   "posts": [
     {
-      "id": "next.js13-udemy",
-      "title": "Next.js13をUdemyで学ぶ",
-      "content": "shincodeさんの教材でNext.js13を学んでいます。",
-      "createdAt": "2022/07/14"
-    },
-    {
       "id": "json-server",
       "title": "JSONサーバー",
       "content": "コーディングなしで完全な偽のRESTAPIを30秒以内に取得します(真剣に)。プロトタイピングとモック作成のための迅速なバックエンドを必要とするフロントエンド開発者向けに<3で作成されました。",
       "createdAt": "2022/07/16"
+    },
+    {
+      "id": "next.js-test",
+      "title": "Next.js13のappディレクトリについて",
+      "content": "appディレクトリはデフォルトでサーバーサイドレンダリングを行います。",
+      "createdAt": "2023-10-18T19:17:10.084Z"
     }
   ]
 }

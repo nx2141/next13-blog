@@ -1,10 +1,19 @@
 import { getAllArticles } from "@/blogAPI";
 import ArticleList from "./components/ArticleList";
+import { supabase } from "@/utils/supabaseClient";
 // import { getAllArticles } from "@/pages/api/blogAPI";
 
 export default async function Home() {
+  // const articles = await getAllArticles();
+  // console.log(supabase);
 
-  const articles = await getAllArticles();
+  const API_URL = process.env.NEXT_PUBLIC_API_URL;
+
+  const res = await fetch(`${API_URL}/api/blog`,{cache:"no-store"});
+  const articles = await res.json();
+
+  
+  console.log(articles);
 
   return (
     <div className="md:flex">
